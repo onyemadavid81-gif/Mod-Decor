@@ -1,0 +1,2284 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Mod Decor - Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Interior Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+		
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+
+<link rel="stylesheet" href="css/swipebox.css"> <!-- gallery css -->
+
+<!-- testimonials css -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" /><!-- flexslider css -->
+<!-- //testimonials css -->
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+<!--//fonts-->
+
+
+    <style>
+
+        /* =========================================
+           PRODUCTS HERO
+        ========================================= */
+
+        .products-hero {
+            position: relative;
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            overflow: hidden;
+
+            background: #222;
+        }
+
+
+        /* HERO IMAGE */
+
+        .products-hero::before {
+            content: "";
+
+            position: absolute;
+            inset: -10px;
+
+            background-image: url("Images/Banner1.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            z-index: 0;
+
+            animation: productsHeroZoom 12s ease-in-out infinite alternate;
+        }
+
+
+        /* HERO DARK OVERLAY */
+
+        .products-hero::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0.75)
+                );
+
+            z-index: 1;
+        }
+
+
+        /* HERO CONTENT */
+
+        .products-hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 800px;
+
+            padding: 40px 20px;
+
+            animation: heroContentFade 1.2s ease forwards;
+        }
+
+
+        .products-hero-content span {
+            display: inline-block;
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .products-hero-content h1 {
+            color: #fff;
+
+            font-size: 54px;
+
+            font-weight: 600;
+
+            margin-top: 50px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+        }
+
+
+        .products-hero-content h1::after {
+            content: "";
+
+            display: block;
+
+            width: 65px;
+
+            height: 3px;
+
+            background: #8C5E51;
+
+            margin: 20px auto 0;
+        }
+
+
+        .products-hero-content p {
+            color: rgba(255, 255, 255, 0.92);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            max-width: 650px;
+
+            margin: 22px auto 0;
+        }
+
+
+        /* =========================================
+           HERO ANIMATIONS
+        ========================================= */
+
+        @keyframes productsHeroZoom {
+
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.08);
+            }
+
+        }
+
+
+        @keyframes heroContentFade {
+
+            from {
+                opacity: 0;
+
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================================
+           PRODUCTS SECTION
+        ========================================= */
+
+        .products-section {
+
+            position: relative;
+
+            padding: 90px 0 100px;
+
+            min-height: 100vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.86),
+                    rgba(255, 255, 255, 0.92)
+                ),
+                url("Images/Banner1.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+        }
+
+
+        /* =========================================
+           SOFT BACKGROUND OVERLAY
+        ========================================= */
+
+        .products-section::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(140, 94, 81, 0.08),
+                    transparent 35%
+                );
+
+            pointer-events: none;
+        }
+
+
+        .products-section .container {
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================================
+           PRODUCTS HEADER
+        ========================================= */
+
+        .products-header {
+
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: 0 auto 60px;
+        }
+
+
+        .products-header h2 {
+
+            font-size: 42px;
+
+            font-weight: 600;
+
+            color: #333;
+
+            margin: 0 0 18px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+        }
+
+
+        .products-header h2::after {
+
+            content: "";
+
+            display: block;
+
+            width: 65px;
+
+            height: 3px;
+
+            background: #8C5E51;
+
+            margin: 18px auto 0;
+        }
+
+
+        .products-header p {
+
+            color: #555;
+
+            font-size: 15px;
+
+            max-width: 680px;
+
+            margin: 22px auto 0;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           PRODUCT ITEM
+        ========================================= */
+
+        .product-item {
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================================
+           PRODUCT CARD
+        ========================================= */
+
+        .product-card {
+
+            background: rgba(255, 255, 255, 0.97);
+
+            overflow: hidden;
+
+            border-radius: 6px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.10);
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+
+            height: 100%;
+        }
+
+
+        .product-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 20px 45px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* =========================================
+           PRODUCT IMAGE
+        ========================================= */
+
+        .product-image {
+
+            height: 270px;
+
+            overflow: hidden;
+
+            background: #eee;
+
+            position: relative;
+        }
+
+
+        .product-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 35%;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.18),
+                    transparent
+                );
+
+            pointer-events: none;
+        }
+
+
+        .product-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.6s ease,
+                filter 0.4s ease;
+        }
+
+
+        .product-card:hover .product-image img {
+
+            transform: scale(1.08);
+
+            filter: brightness(1.04);
+        }
+
+
+        /* =========================================
+           PRODUCT CONTENT
+        ========================================= */
+
+        .product-content {
+
+            padding: 25px;
+        }
+
+
+        .product-category {
+
+            display: block;
+
+            color: #8C5E51;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .product-content h3 {
+
+            font-size: 21px;
+
+            color: #333;
+
+            font-weight: 600;
+
+            margin: 0 0 12px;
+        }
+
+
+        .product-content p {
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================================
+           SPECIFICATIONS
+        ========================================= */
+
+        .specifications {
+
+            border-top: 1px solid #e5e0dc;
+
+            padding-top: 10px;
+
+            margin-top: 18px;
+        }
+
+
+        .specifications div {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 8px 0;
+
+            border-bottom: 1px solid #f0ece9;
+
+            font-size: 13px;
+        }
+
+
+        .specifications div:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .specifications strong {
+
+            color: #3b3b3b;
+
+            font-weight: 600;
+        }
+
+
+        .specifications span {
+
+            color: #777;
+
+            text-align: right;
+        }
+
+
+        /* =========================================
+           NO RESULTS
+        ========================================= */
+
+        #noResults {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            max-width: 500px;
+
+            margin: 30px auto 0;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            border-radius: 6px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+
+        #noResults i {
+
+            display: block;
+
+            font-size: 45px;
+
+            color: #8C5E51;
+
+            margin-bottom: 20px;
+        }
+
+
+        #noResults h3 {
+
+            color: #444;
+
+            font-size: 24px;
+
+            margin-bottom: 10px;
+        }
+
+
+        #noResults p {
+
+            color: #888;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        .gallery-footer {
+            background: #111;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .gallery-footer p {
+            margin: 0;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        .gallery-footer span {
+            color: #8C5E51;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 767px) {
+
+            .products-hero {
+
+                min-height: 350px;
+            }
+
+
+            .products-hero-content {
+
+                padding: 30px 20px;
+            }
+
+
+            .products-hero-content h1 {
+
+                font-size: 34px;
+
+                letter-spacing: 1px;
+            }
+
+
+            .products-hero-content span {
+
+                font-size: 10px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .products-hero-content p {
+
+                font-size: 14px;
+
+                line-height: 1.8;
+            }
+
+
+            .products-section {
+
+                padding: 60px 15px 70px;
+
+                background-attachment: scroll;
+            }
+
+
+            .products-header {
+
+                margin-bottom: 40px;
+            }
+
+
+            .products-header h2 {
+
+                font-size: 30px;
+
+                letter-spacing: 1px;
+            }
+
+
+            .products-header p {
+
+                font-size: 14px;
+
+                line-height: 1.8;
+            }
+
+
+            .product-image {
+
+                height: 230px;
+            }
+
+
+            .product-content {
+
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+
+<!-- banner -->
+<div class="main_section_agile" id="home">
+	<div class="agileits_w3layouts_banner_nav">
+		<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header navbar-left">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="logo-container">
+					<img src="Images/MOD DECOR LOGO.png" alt="Logo" class="responsive-logo">
+				</div>
+
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+
+			<nav class="link-effect-2" id="link-effect-2">
+			<ul class="nav navbar-nav">
+
+				<li class="active">
+					<a href="index.html" class="effect-3">Home</a>
+				</li>
+
+				<li>
+					<a href="#about" class="effect-3 scroll">About</a>
+				</li>
+
+				<li>
+					<a href="#services" class="effect-3 scroll">Services</a>
+				</li>
+
+				<li>
+					<a href="gallery.html" class="effect-3">Gallery</a>
+				</li>
+
+				<li>
+					<a href="products.html" class="effect-3">Products</a>
+				</li>
+
+				<li>
+					<a href="#team" class="effect-3 scroll">Team</a>
+				</li>
+
+				<li>
+					<a href="#client" class="effect-3 scroll">Clients</a>
+				</li>
+
+				<li>
+					<a href="#contact" class="effect-3 scroll">Contact Us</a>
+				</li>
+
+			</ul>
+			</nav>
+
+			<!-- Search -->
+			<div class="product-search">
+			<form action="products.html" method="GET">
+
+				<div class="search-box">
+					<input
+						type="search"
+						name="search"
+						placeholder="Search..."
+						autocomplete="off"
+					>
+
+					<button type="submit" aria-label="Search">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+
+			</form>
+			</div>
+
+			</div>
+
+		</nav>
+		<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+
+<!-- =========================================
+     PRODUCTS HERO
+========================================= -->
+
+<section class="products-hero">
+
+    <div class="products-hero-content">
+
+
+        <h1>
+            Our Products
+        </h1>
+
+        <p>
+            Discover premium interior decoration products,
+            finishes and materials carefully selected to
+            bring style, comfort and character to every space.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRODUCTS SECTION
+========================================= -->
+
+<section class="products-section">
+
+
+    <div class="container">
+
+
+        <!-- =========================================
+             PRODUCTS HEADER
+        ========================================== -->
+
+        <div class="products-header">
+
+            <h2>
+                Explore Our Products
+            </h2>
+
+            <p>
+                Explore our range of interior decoration
+                products, finishes and materials designed
+                to transform your space.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================================
+             PRODUCT GRID
+        ========================================== -->
+
+        <div
+            class="row"
+            id="productsContainer">
+
+
+            <!-- =====================================
+                 PRODUCT 1
+            ====================================== -->
+
+            <div
+                class="col-md-4 col-sm-6 product-item"
+                data-name="POP Ceiling"
+                data-category="ceiling">
+
+                <div class="product-card">
+
+
+                    <div class="product-image">
+
+                        <img
+                            src="Images/P1.jpeg"
+                            alt="POP Ceiling">
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Ceiling
+                        </span>
+
+                        <h3>
+                            POP Ceiling
+                        </h3>
+
+                        <p>
+                            Premium POP ceiling designs for modern
+                            interior decoration projects.
+                        </p>
+
+
+                        <div class="specifications">
+
+                            <div>
+                                <strong>
+                                    Material
+                                </strong>
+
+                                <span>
+                                    POP / Gypsum
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Finish
+                                </strong>
+
+                                <span>
+                                    Smooth
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Application
+                                </strong>
+
+                                <span>
+                                    Interior Ceiling
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Customization
+                                </strong>
+
+                                <span>
+                                    Available
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT 2
+            ====================================== -->
+
+            <div
+                class="col-md-4 col-sm-6 product-item"
+                data-name="Decorative Wall Panel"
+                data-category="wall panel">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="Images/P2.jpeg"
+                            alt="Decorative Wall Panel">
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Wall Decoration
+                        </span>
+
+                        <h3>
+                            Decorative Wall Panel
+                        </h3>
+
+                        <p>
+                            Stylish wall panels designed to enhance
+                            interior spaces with texture, color and
+                            visual interest.
+                        </p>
+
+
+                        <div class="specifications">
+
+                            <div>
+                                <strong>
+                                    Material
+                                </strong>
+
+                                <span>
+                                    Composite
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Finish
+                                </strong>
+
+                                <span>
+                                    Textured
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Application
+                                </strong>
+
+                                <span>
+                                    Interior Walls
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Maintenance
+                                </strong>
+
+                                <span>
+                                    Low
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT 3
+            ====================================== -->
+
+            <div
+                class="col-md-4 col-sm-6 product-item"
+                data-name="Wooden Wall Cladding"
+                data-category="wood wall cladding">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="Images/P3.jpeg"
+                            alt="Wooden Wall Cladding">
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Wall Cladding
+                        </span>
+
+                        <h3>
+                            Wooden Wall Cladding
+                        </h3>
+
+                        <p>
+                            Stylish wooden wall finishes for living
+                            rooms, offices, bedrooms and commercial
+                            spaces.
+                        </p>
+
+
+                        <div class="specifications">
+
+                            <div>
+                                <strong>
+                                    Material
+                                </strong>
+
+                                <span>
+                                    Engineered Wood
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Finish
+                                </strong>
+
+                                <span>
+                                    Wood Grain
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Application
+                                </strong>
+
+                                <span>
+                                    Interior Walls
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Design
+                                </strong>
+
+                                <span>
+                                    Custom
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT 4
+            ====================================== -->
+
+            <div
+                class="col-md-4 col-sm-6 product-item"
+                data-name="Luxury Wallpaper"
+                data-category="wallpaper">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="Images/P4.jpeg"
+                            alt="Luxury Wallpaper">
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Wall Finish
+                        </span>
+
+                        <h3>
+                            Luxury Wallpaper
+                        </h3>
+
+                        <p>
+                            Decorative wallpaper options available
+                            in different textures, patterns and
+                            finishes.
+                        </p>
+
+
+                        <div class="specifications">
+
+                            <div>
+                                <strong>
+                                    Material
+                                </strong>
+
+                                <span>
+                                    Vinyl / Fabric
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Finish
+                                </strong>
+
+                                <span>
+                                    Matte
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Application
+                                </strong>
+
+                                <span>
+                                    Interior Walls
+                                </span>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT 5
+            ====================================== -->
+                <div 
+                        class="col-md-4 col-sm-6 product-item" 
+                        data-name="Corners" 
+                        data-category="corners">
+
+                        <div class="product-card">
+
+                            <div class="product-image">
+
+                                <img 
+                                    src="Images/P7.jpeg" 
+                                    alt="Corners">
+
+                            </div>
+
+
+                            <div class="product-content">
+
+                                <span class="product-category">
+                                    Interior Decor
+                                </span>
+
+                                <h3>
+                                    Corners
+                                </h3>
+
+                                <p>
+                                    Decorative interior corner elements designed to
+                                    create a clean, elegant and finished look for
+                                    walls, ceilings and other interior spaces.
+                                </p>
+
+
+                                <div class="specifications">
+
+                                    <div>
+                                        <strong>
+                                            Material
+                                        </strong>
+
+                                        <span>
+                                            PVC / Gypsum
+                                        </span>
+                                    </div>
+
+
+                                    <div>
+                                        <strong>
+                                            Finish
+                                        </strong>
+
+                                        <span>
+                                            Smooth / Decorative
+                                        </span>
+                                    </div>
+
+
+                                    <div>
+                                        <strong>
+                                            Application
+                                        </strong>
+
+                                        <span>
+                                            Walls / Ceilings
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT 6
+            ====================================== -->
+
+            <div 
+                class="col-md-4 col-sm-6 product-item" 
+                data-name="Corners/Angled Corner" 
+                data-category="corners"> 
+
+                <div class="product-card"> 
+
+                    <div class="product-image"> 
+
+                        <img 
+                            src="Images/P6.jpeg" 
+                            alt="Corners/Angled Corner"> 
+
+                    </div> 
+
+                    <div class="product-content"> 
+
+                        <span class="product-category"> 
+                            Interior decor 
+                        </span> 
+
+                        <h3> 
+                            Corners/Angled Corner
+                        </h3> 
+
+                        <p> 
+                            Custom-designed corners and angled corner 
+                            solutions for a neat, seamless finish that 
+                            complements modern interior spaces. 
+                        </p> 
+
+                        <div class="specifications"> 
+
+                            <div> 
+                                <strong> 
+                                    Design 
+                                </strong> 
+
+                                <span> 
+                                    Corner / Angled Corner 
+                                </span> 
+                            </div> 
+
+                            <div> 
+                                <strong> 
+                                    Finish 
+                                </strong> 
+
+                                <span> 
+                                    Customizable 
+                                </span> 
+                            </div> 
+
+                            <div> 
+                                <strong> 
+                                    Application 
+                                </strong> 
+
+                                <span> 
+                                    Interior Spaces 
+                                </span> 
+                            </div> 
+
+
+
+                        </div> 
+
+                    </div> 
+
+                </div> 
+
+            </div>
+
+
+
+
+            <!-- =====================================
+                 PRODUCT 7
+            ====================================== -->
+                <div 
+                        class="col-md-4 col-sm-6 product-item" 
+                        data-name="Corners" 
+                        data-category="corners">
+
+                        <div class="product-card">
+
+                            <div class="product-image">
+
+                                <img 
+                                    src="Images/P7.jpeg" 
+                                    alt="Corners">
+
+                            </div>
+
+
+                            <div class="product-content">
+
+                                <span class="product-category">
+                                    Interior Decor
+                                </span>
+
+                                <h3>
+                                    Corners
+                                </h3>
+
+                                <p>
+                                    Decorative interior corner elements designed to
+                                    create a clean, elegant and finished look for
+                                    walls, ceilings and other interior spaces.
+                                </p>
+
+
+                                <div class="specifications">
+
+                                    <div>
+                                        <strong>
+                                            Material
+                                        </strong>
+
+                                        <span>
+                                            PVC / Gypsum
+                                        </span>
+                                    </div>
+
+
+                                    <div>
+                                        <strong>
+                                            Finish
+                                        </strong>
+
+                                        <span>
+                                            Smooth / Decorative
+                                        </span>
+                                    </div>
+
+
+                                    <div>
+                                        <strong>
+                                            Application
+                                        </strong>
+
+                                        <span>
+                                            Walls / Ceilings
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT 8
+            ====================================== -->
+            <div 
+                class="col-md-4 col-sm-6 product-item" 
+                data-name="Floor Skirting" 
+                data-category="floor skirting">
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img 
+                            src="Images/P8.jpeg" 
+                            alt="Floor Skirting">
+
+                    </div>
+
+
+                    <div class="product-content">
+
+                        <span class="product-category">
+                            Flooring & Interior Decor
+                        </span>
+
+                        <h3>
+                            Floor Skirting
+                        </h3>
+
+                        <p>
+                            Stylish floor skirting designed to
+                            provide a clean, elegant finish between walls
+                            and flooring while protecting the edges
+                            of interior walls.
+                        </p>
+
+
+                        <div class="specifications">
+
+                            <div>
+                                <strong>
+                                    Material
+                                </strong>
+
+                                <span>
+                                    PVC / Wood / MDF
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Finish
+                                </strong>
+
+                                <span>
+                                    Smooth / Decorative
+                                </span>
+                            </div>
+
+
+                            <div>
+                                <strong>
+                                    Application
+                                </strong>
+
+                                <span>
+                                    Floor & Wall Edges
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PRODUCT 9
+            ====================================== -->
+                <div 
+                    class="col-md-4 col-sm-6 product-item" 
+                    data-name="Flower Ceiling Cornice" 
+                    data-category="ceiling cornice">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img 
+                                src="Images/P9.jpeg" 
+                                alt="Flower Ceiling Cornice">
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Ceiling & Interior Decor
+                            </span>
+
+                            <h3>
+                                Flower Ceiling Cornice
+                            </h3>
+
+                            <p>
+                                Elegant decorative flower-patterned ceiling cornice
+                                designed to add a refined and stylish finish to
+                                interior ceiling and wall edges.
+                            </p>
+
+
+                            <div class="specifications">
+
+                                <div>
+                                    <strong>
+                                        Material
+                                    </strong>
+
+                                    <span>
+                                        POP / Gypsum
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Finish
+                                    </strong>
+
+                                    <span>
+                                        Smooth / Decorative
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Application
+                                    </strong>
+
+                                    <span>
+                                        Ceiling / Wall Edges
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+                <div 
+                    class="col-md-4 col-sm-6 product-item" 
+                    data-name="Flower Ceiling Cornice" 
+                    data-category="ceiling cornice">
+
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img 
+                                src="Images/P10.jpeg" 
+                                alt="Flower Ceiling Cornice">
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Ceiling & Interior Decor
+                            </span>
+
+                            <h3>
+                                Flower Ceiling Cornice
+                            </h3>
+
+                            <p>
+                                Elegant decorative flower-patterned ceiling cornice
+                                designed to add a refined and stylish finish to
+                                interior ceiling and wall edges.
+                            </p>
+
+
+                            <div class="specifications">
+
+                                <div>
+                                    <strong>
+                                        Material
+                                    </strong>
+
+                                    <span>
+                                        POP / Gypsum
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Finish
+                                    </strong>
+
+                                    <span>
+                                        Smooth / Decorative
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Application
+                                    </strong>
+
+                                    <span>
+                                        Ceiling / Wall Edges
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div 
+                    class="col-md-4 col-sm-6 product-item" 
+                    data-name="Flower Ceiling Cornice" 
+                    data-category="ceiling cornice">
+
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img 
+                                src="Images/P11.jpeg" 
+                                alt="Flower Ceiling Cornice">
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Ceiling & Interior Decor
+                            </span>
+
+                            <h3>
+                                Flower Ceiling Cornice
+                            </h3>
+
+                            <p>
+                                Elegant decorative flower-patterned ceiling cornice
+                                designed to add a refined and stylish finish to
+                                interior ceiling and wall edges.
+                            </p>
+
+
+                            <div class="specifications">
+
+                                <div>
+                                    <strong>
+                                        Material
+                                    </strong>
+
+                                    <span>
+                                        POP / Gypsum
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Finish
+                                    </strong>
+
+                                    <span>
+                                        Smooth / Decorative
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Application
+                                    </strong>
+
+                                    <span>
+                                        Ceiling / Wall Edges
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div 
+                    class="col-md-4 col-sm-6 product-item" 
+                    data-name="Flower Ceiling Cornice" 
+                    data-category="ceiling cornice">
+
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img 
+                                src="Images/P12.jpeg" 
+                                alt="Flower Ceiling Cornice">
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Ceiling & Interior Decor
+                            </span>
+
+                            <h3>
+                                Flower Ceiling Cornice
+                            </h3>
+
+                            <p>
+                                Elegant decorative flower-patterned ceiling cornice
+                                designed to add a refined and stylish finish to
+                                interior ceiling and wall edges.
+                            </p>
+
+
+                            <div class="specifications">
+
+                                <div>
+                                    <strong>
+                                        Material
+                                    </strong>
+
+                                    <span>
+                                        POP / Gypsum
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Finish
+                                    </strong>
+
+                                    <span>
+                                        Smooth / Decorative
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Application
+                                    </strong>
+
+                                    <span>
+                                        Ceiling / Wall Edges
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div 
+                    class="col-md-4 col-sm-6 product-item" 
+                    data-name="Flower Ceiling Cornice" 
+                    data-category="ceiling cornice">
+
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img 
+                                src="Images/P13.jpeg" 
+                                alt="Flower Ceiling Cornice">
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Ceiling & Interior Decor
+                            </span>
+
+                            <h3>
+                                Flower Ceiling Cornice
+                            </h3>
+
+                            <p>
+                                Elegant decorative flower-patterned ceiling cornice
+                                designed to add a refined and stylish finish to
+                                interior ceiling and wall edges.
+                            </p>
+
+
+                            <div class="specifications">
+
+                                <div>
+                                    <strong>
+                                        Material
+                                    </strong>
+
+                                    <span>
+                                        POP / Gypsum
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Finish
+                                    </strong>
+
+                                    <span>
+                                        Smooth / Decorative
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Application
+                                    </strong>
+
+                                    <span>
+                                        Ceiling / Wall Edges
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div 
+                    class="col-md-4 col-sm-6 product-item" 
+                    data-name="Flower Ceiling Cornice" 
+                    data-category="ceiling cornice">
+
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img 
+                                src="Images/P14.jpeg" 
+                                alt="Flower Ceiling Cornice">
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Ceiling & Interior Decor
+                            </span>
+
+                            <h3>
+                                Flower Ceiling Cornice
+                            </h3>
+
+                            <p>
+                                Elegant decorative flower-patterned ceiling cornice
+                                designed to add a refined and stylish finish to
+                                interior ceiling and wall edges.
+                            </p>
+
+
+                            <div class="specifications">
+
+                                <div>
+                                    <strong>
+                                        Material
+                                    </strong>
+
+                                    <span>
+                                        POP / Gypsum
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Finish
+                                    </strong>
+
+                                    <span>
+                                        Smooth / Decorative
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Application
+                                    </strong>
+
+                                    <span>
+                                        Ceiling / Wall Edges
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div 
+                    class="col-md-4 col-sm-6 product-item" 
+                    data-name="Flower Ceiling Cornice" 
+                    data-category="ceiling cornice">
+
+                    <div class="product-card">
+                        <div class="product-image">
+
+                            <img 
+                                src="Images/P15.jpeg" 
+                                alt="Flower Ceiling Cornice">
+
+                        </div>
+
+
+                        <div class="product-content">
+
+                            <span class="product-category">
+                                Ceiling & Interior Decor
+                            </span>
+
+                            <h3>
+                                Flower Ceiling Cornice
+                            </h3>
+
+                            <p>
+                                Elegant decorative flower-patterned ceiling cornice
+                                designed to add a refined and stylish finish to
+                                interior ceiling and wall edges.
+                            </p>
+
+
+                            <div class="specifications">
+
+                                <div>
+                                    <strong>
+                                        Material
+                                    </strong>
+
+                                    <span>
+                                        POP / Gypsum
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Finish
+                                    </strong>
+
+                                    <span>
+                                        Smooth / Decorative
+                                    </span>
+                                </div>
+
+
+                                <div>
+                                    <strong>
+                                        Application
+                                    </strong>
+
+                                    <span>
+                                        Ceiling / Wall Edges
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+        </div>
+
+
+
+        <!-- =========================================
+             NO RESULTS
+        ========================================= -->
+
+        <div id="noResults">
+
+            <i class="fa fa-search"></i>
+
+            <h3>
+                No Product Found
+            </h3>
+
+            <p>
+                We couldn't find a product matching your search.
+                Try another product name or category.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<section class="rfq-banner">
+    <div class="container">
+        <div class="rfq-banner-content">
+
+            <div class="rfq-banner-text">
+                <span class="rfq-eyebrow">LET'S BRING YOUR IDEAS TO LIFE</span>
+
+                <h2>Found Something You Love?</h2>
+
+                <p>
+                    Ready to transform your space? Tell us what you need
+                    and let our team help you find the perfect interior
+                    decoration solutions for your project.
+                </p>
+
+                <div class="rfq-banner-features">
+                    <span><i class="fa fa-check-circle"></i> Quality Products</span>
+                    <span><i class="fa fa-check-circle"></i> Tailored Quotes</span>
+                    <span><i class="fa fa-check-circle"></i> Professional Service</span>
+                </div>
+            </div>
+
+            <div class="rfq-banner-action">
+                <a href="moddecor-simple-rfq/moddecor-simple-rfq/rfq.php" class="rfq-banner-btn">
+                    Request a Quote
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+
+                <small>Tell us about your project today.</small>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+        <footer class="gallery-footer">
+
+            <div class="container">
+
+                <p>
+                    © 2026
+                    <span>MOD DECOR Investment Nig. Ltd.</span>
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+        </footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const products =
+        document.querySelectorAll(".product-item");
+
+
+    const noResults =
+        document.getElementById("noResults");
+
+
+    /* =========================================
+       GET SEARCH QUERY FROM NAVBAR
+    ========================================= */
+
+    const urlParams =
+        new URLSearchParams(window.location.search);
+
+
+    const searchQuery =
+        urlParams.get("search");
+
+
+    /* =========================================
+       IF USER SEARCHED FOR A PRODUCT
+    ========================================= */
+
+    if (searchQuery) {
+
+
+        const searchTerm =
+            searchQuery
+                .toLowerCase()
+                .trim();
+
+
+        let found = 0;
+
+
+        products.forEach(function (product) {
+
+
+            const name =
+                product
+                    .getAttribute("data-name")
+                    .toLowerCase();
+
+
+            const category =
+                product
+                    .getAttribute("data-category")
+                    .toLowerCase();
+
+
+            /* SEARCH NAME OR CATEGORY */
+
+            if (
+                name.includes(searchTerm) ||
+                category.includes(searchTerm)
+            ) {
+
+                product.style.display = "";
+
+                found++;
+
+            }
+
+            else {
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+
+        /* =====================================
+           SHOW NO RESULTS
+        ====================================== */
+
+        if (found === 0) {
+
+            noResults.style.display = "block";
+
+        }
+
+        else {
+
+            noResults.style.display = "none";
+
+        }
+
+    }
+
+
+    /* =========================================
+       NO SEARCH = SHOW ALL PRODUCTS
+    ========================================= */
+
+    else {
+
+
+        products.forEach(function (product) {
+
+            product.style.display = "";
+
+        });
+
+
+        noResults.style.display = "none";
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- jQuery -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+
+
+<!-- Bootstrap -->
+
+<script src="js/bootstrap.js"></script>
+
+
+</body>
+
+</html>

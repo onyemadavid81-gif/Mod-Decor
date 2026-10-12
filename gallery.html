@@ -1,36 +1,622 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mod Decor - Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Interior Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-            function hideURLbar(){ window.scrollTo(0,1); } </script>
-            
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/font-awesome.css" rel="stylesheet"> 
+<title>Mod Decor - Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Interior Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+		
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/font-awesome.css" rel="stylesheet"> 
 
-    <link rel="stylesheet" href="css/swipebox.css"> <!-- gallery css -->
+<link rel="stylesheet" href="css/swipebox.css"> <!-- gallery css -->
 
-    <!-- testimonials css -->
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" /><!-- flexslider css -->
-    <!-- //testimonials css -->
+<!-- testimonials css -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" /><!-- flexslider css -->
+<!-- //testimonials css -->
 
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
-    <!--fonts-->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-    <!--//fonts-->
+<!--fonts-->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+<!--//fonts-->
+    <style>
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #fff;
+        }
+
+
+        /* =========================================
+           HEADER / NAVBAR
+        ========================================= */
+
+        .gallery-header {
+            background: transparent;
+            padding: 18px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .gallery-header .navbar {
+            margin-bottom: 0;
+            border: none;
+            background: transparent;
+        }
+
+        .gallery-header .navbar-default {
+            background: transparent;
+            border: none;
+        }
+
+        .gallery-header .navbar-default .navbar-nav > li > a {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-header .navbar-default .navbar-nav > li > a:hover,
+        .gallery-header .navbar-default .navbar-nav > li.active > a {
+            color: #8C5E51;
+            background: transparent;
+        }
+
+        .responsive-logo {
+            max-width: 170px;
+            height: auto;
+        }
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .gallery-hero {
+            position: relative;
+            height: 500px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("Images/Banner3.jpg") center center / cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .gallery-hero-content {
+            color: #fff;
+            padding: 20px;
+        }
+
+        .gallery-hero-content h1 {
+
+            font-size: 52px;
+            font-weight: 700;
+           margin-top: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .gallery-hero-content h1 span {
+            color: #8C5E51;
+        }
+
+        .gallery-hero-content p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #eee;
+        }
+
+
+        /* =========================================
+           GALLERY SECTION
+        ========================================= */
+
+        .gallery-section {
+            padding: 80px 0;
+        }
+
+        #images,
+        #videos {
+            scroll-margin-top: 30px;
+        }
+
+        #videos {
+            padding-top: 80px;
+            margin-top: 60px;
+        }
+
+        .media-section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .media-section-title h3 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .media-section-title h3 span {
+            color: #8C5E51;
+        }
+
+        .media-section-title p {
+            color: #777;
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .gallery-title h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 34px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .gallery-title h2 span {
+            color: #8C5E51;
+        }
+
+        .gallery-title p {
+            color: #777;
+            max-width: 650px;
+            margin: 15px auto 0;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           FILTER BUTTONS
+        ========================================= */
+
+        .gallery-filter {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .gallery-filter button {
+            border: 1px solid #ddd;
+            background: #fff;
+            color: #555;
+            padding: 11px 25px;
+            margin: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .gallery-filter button:hover,
+        .gallery-filter button.active {
+            background: #8C5E51;
+            border-color: #8C5E51;
+            color: #fff;
+        }
+
+
+        /* =========================================
+           IMAGE GRID
+        ========================================= */
+
+        .gallery-grid {
+            margin: 0 -10px;
+        }
+
+        .gallery-item {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+            background: #eee;
+            cursor: pointer;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* =========================================
+           IMAGE OVERLAY
+        ========================================= */
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background: rgba(0, 0, 0, 0.68);
+
+            opacity: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            transition: all 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255, 255, 255, 0.7);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            font-size: 20px;
+
+            margin-bottom: 15px;
+
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover .gallery-overlay i {
+            background: #8C5E51;
+            border-color: #8C5E51;
+            transform: translateY(-5px);
+        }
+
+        .gallery-overlay h4 {
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+
+        /* =========================================
+           VIDEO CARD
+        ========================================= */
+
+        .video-card {
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+            background: #111;
+            cursor: pointer;
+        }
+
+        .video-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background: rgba(0, 0, 0, 0.35);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover .video-overlay {
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        .video-play {
+            width: 80px;
+            height: 80px;
+
+            border-radius: 50%;
+
+            background: #8C5E51;
+            color: #fff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 28px;
+
+            padding-left: 5px;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+            transition: all 0.35s ease;
+        }
+
+        .video-card:hover .video-play {
+            transform: scale(1.12);
+            background: #fff;
+            color: #8C5E51;
+        }
+
+        .video-label {
+            position: absolute;
+            bottom: 20px;
+            left: 25px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .video-label h4 {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .video-label p {
+            margin: 5px 0 0;
+            color: #ddd;
+        }
+
+
+        /* =========================================
+           VIDEO MODAL
+        ========================================= */
+
+        .gallery-video-modal .modal-dialog {
+            width: 90%;
+            max-width: 1000px;
+            margin: 5% auto;
+        }
+
+        .gallery-video-modal .modal-content {
+            background: #111;
+            border: none;
+            border-radius: 0;
+        }
+
+        .gallery-video-modal .modal-header {
+            border: none;
+            padding: 10px 15px;
+        }
+
+        .gallery-video-modal .close {
+            color: #fff;
+            opacity: 1;
+            font-size: 30px;
+        }
+
+        .gallery-video-modal .modal-body {
+            padding: 0;
+        }
+
+        .gallery-video-modal video {
+            width: 100%;
+            height: auto;
+            max-height: 75vh;
+            background: #000;
+            display: block;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .gallery-cta {
+            background-image: url("Images/Banner4.jpg") center center / cover no-repeat;
+            padding: 70px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .gallery-cta h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .gallery-cta p {
+            color: #ccc;
+            max-width: 650px;
+            margin: 0 auto 25px;
+            line-height: 1.8;
+        }
+
+        .gallery-cta a {
+            display: inline-block;
+            padding: 13px 30px;
+            background: #8C5E51;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-cta a:hover {
+            background: #fff;
+            color: #8C5E51;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .gallery-footer {
+            background: #111;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .gallery-footer p {
+            margin: 0;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        .gallery-footer span {
+            color: #8C5E51;
+        }
+
+
+        /* =========================================
+           WHATSAPP
+        ========================================= */
+
+        .whatsapp-float {
+            position: fixed;
+
+            width: 58px;
+            height: 58px;
+
+            bottom: 25px;
+            right: 25px;
+
+            background: #25D366;
+            color: #fff;
+
+            border-radius: 50%;
+
+            text-align: center;
+
+            font-size: 28px;
+
+            z-index: 9999;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float i {
+            line-height: 58px;
+        }
+
+        .whatsapp-float:hover {
+            color: #fff;
+            transform: translateY(-5px) scale(1.05);
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 767px) {
+
+            .gallery-header {
+                padding: 10px 0;
+            }
+
+            .gallery-hero {
+                height: 300px;
+            }
+
+            .gallery-cta {
+                padding: 0px;
+            }
+
+            .gallery-hero-content h1 {
+                font-size: 34px;
+            }
+
+            .gallery-hero-content p {
+                font-size: 14px;
+            }
+
+            .gallery-section {
+                padding: 55px 15px;
+            }
+
+            .gallery-title h2 {
+                font-size: 27px;
+            }
+
+            .gallery-card {
+                height: 240px;
+            }
+
+            .video-card {
+                height: 300px;
+            }
+
+            .gallery-video-modal .modal-dialog {
+                width: 95%;
+            }
+
+            .gallery-filter button {
+                padding: 9px 16px;
+                font-size: 11px;
+            }
+
+            .responsive-logo {
+                max-width: 145px;
+            }
+
+        }
+
+    </style>
 
 </head>
+
+
 <body>
 
-    <div class="main_section_agile" id="home">
+
+<div class="main_section_agile" id="home">
 	<div class="agileits_w3layouts_banner_nav">
 		<div class="container">
 		<nav class="navbar navbar-default">
@@ -52,7 +638,7 @@
 			<nav class="link-effect-2" id="link-effect-2">
 			<ul class="nav navbar-nav">
 
-				<li class="active">
+				<li>
 					<a href="index.html" class="effect-3">Home</a>
 				</li>
 
@@ -64,7 +650,7 @@
 					<a href="#services" class="effect-3 scroll">Services</a>
 				</li>
 
-				<li>
+				<li class="active">
 					<a href="gallery.html" class="effect-3">Gallery</a>
 				</li>
 
@@ -114,6 +700,983 @@
 		</div>
 	</div>
 </div>
-    
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="gallery-hero">
+
+    <div class="gallery-hero-content">
+
+        <h1>
+            Our <span>Gallery</span>
+        </h1>
+
+        <p>
+            Explore our collection of interior designs, ceiling projects,
+            decorative finishes and completed spaces.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     GALLERY
+========================================= -->
+
+<section class="gallery-section">
+
+    <div class="container">
+
+        <div class="gallery-title">
+
+            <h2>
+                Our <span>Work</span>
+            </h2>
+
+            <p>
+                Take a look at some of the spaces we have transformed
+                through creativity, craftsmanship and modern interior design.
+            </p>
+
+        </div>
+
+
+        <!-- GALLERY NAVIGATION -->
+
+        <div class="gallery-filter">
+
+            <button
+                type="button"
+                class="filter-btn active"
+                id="allBtn">
+
+                <i class="fa fa-th"></i>
+                &nbsp; All
+
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                id="imagesBtn">
+
+                <i class="fa fa-picture-o"></i>
+                &nbsp; Images
+
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                id="videosBtn">
+
+                <i class="fa fa-video-camera"></i>
+                &nbsp; Videos
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================================
+             IMAGE GALLERY
+        ========================================== -->
+
+        <div id="images">
+
+            <div class="media-section-title">
+
+                <h3>
+                    Image <span>Gallery</span>
+                </h3>
+
+                <p>
+                    Explore our interior spaces and completed projects.
+                </p>
+
+            </div>
+
+            <div class="row gallery-grid">
+
+
+            <!-- IMAGE 1 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g1.jpg"
+                       class="swipebox"
+                       title="Interior Design">
+
+                        <img
+                            src="Images/g1.jpg"
+                            alt="Interior Design">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Interior Design
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 2 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g2.jpg"
+                       class="swipebox"
+                       title="Modern Interior">
+
+                        <img
+                            src="Images/g2.jpg"
+                            alt="Modern Interior">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Modern Interior
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 3 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g3.jpg"
+                       class="swipebox"
+                       title="Ceiling Design">
+
+                        <img
+                            src="Images/g3.jpg"
+                            alt="Ceiling Design">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Ceiling Design
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 4 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g4.jpg"
+                       class="swipebox"
+                       title="Living Room">
+
+                        <img
+                            src="Images/g4.jpg"
+                            alt="Living Room">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Living Room
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 5 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g5.jpg"
+                       class="swipebox"
+                       title="Interior Decoration">
+
+                        <img
+                            src="Images/g5.jpg"
+                            alt="Interior Decoration">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Interior Decoration
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 6 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g6.jpg"
+                       class="swipebox"
+                       title="Luxury Interior">
+
+                        <img
+                            src="Images/g6.jpg"
+                            alt="Luxury Interior">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Luxury Interior
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 7 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g7.jpg"
+                       class="swipebox"
+                       title="Wood Wall Design">
+
+                        <img
+                            src="Images/g7.jpg"
+                            alt="Wood Wall Design">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Wood Wall Design
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 8 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g8.jpg"
+                       class="swipebox"
+                       title="Modern Living Space">
+
+                        <img
+                            src="Images/g8.jpg"
+                            alt="Modern Living Space">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Living Space
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 9 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g9.jpg"
+                       class="swipebox"
+                       title="Decorative Interior">
+
+                        <img
+                            src="Images/g9.jpg"
+                            alt="Decorative Interior">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Decorative Interior
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 10 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g10.jpg"
+                       class="swipebox"
+                       title="Premium Interior">
+
+                        <img
+                            src="Images/g10.jpg"
+                            alt="Premium Interior">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Premium Interior
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 11 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g11.jpg"
+                       class="swipebox"
+                       title="Ceiling Project">
+
+                        <img
+                            src="Images/g11.jpg"
+                            alt="Ceiling Project">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Ceiling Project
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 12 -->
+
+            <div class="col-md-4 col-sm-6 gallery-item gallery-images">
+
+                <div class="gallery-card">
+
+                    <a href="Images/g12.jpg"
+                       class="swipebox"
+                       title="Completed Project">
+
+                        <img
+                            src="Images/g12.jpg"
+                            alt="Completed Project">
+
+                        <div class="gallery-overlay">
+
+                            <h4>
+                                Completed Project
+                            </h4>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- =========================================
+             VIDEO GALLERY
+        ========================================== -->
+
+        <div id="videos">
+
+            <div class="media-section-title">
+
+                <h3>
+                    Video <span>Gallery</span>
+                </h3>
+
+                <p>
+                    Watch our interior projects and transformations.
+                </p>
+
+            </div>
+
+            <div class="row">
+
+                <!-- VIDEO 1 -->
+
+                <div class="col-md-6 video-item">
+
+                    <div class="video-card"
+                         data-toggle="modal"
+                         data-target="#videoModal1">
+
+                        <video muted preload="metadata">
+
+                            <source
+                                src="Images/About Video.mp4"
+                                type="video/mp4">
+
+                        </video>
+
+                        <div class="video-overlay">
+
+                            <div class="video-play">
+                                <i class="fa fa-play"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="video-label">
+
+                            <h4>
+                                MOD DECOR Project Showcase
+                            </h4>
+
+                            <p>
+                                Watch our interior transformation
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIDEO 2
+                     CHANGE THE FILE NAME WHEN YOU ADD YOUR VIDEO -->
+
+                <div class="col-md-6 video-item">
+
+                    <div class="video-card"
+                         data-toggle="modal"
+                         data-target="#videoModal2">
+
+                        <video muted preload="metadata">
+
+                            <source
+                                src="Images/About Video2.mp4"
+                                type="video/mp4">
+
+                        </video>
+
+                        <div class="video-overlay">
+
+                            <div class="video-play">
+                                <i class="fa fa-play"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="video-label">
+
+                            <h4>
+                                MOD DECOR Design Project
+                            </h4>
+
+                            <p>
+                                Explore another completed project
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIDEO 3 -->
+
+                <div class="col-md-6 video-item">
+
+                    <div class="video-card"
+                         data-toggle="modal"
+                         data-target="#videoModal3">
+
+                        <video muted preload="metadata">
+
+                            <source
+                                src="Images/About Video3.mp4"
+                                type="video/mp4">
+
+                        </video>
+
+                        <div class="video-overlay">
+
+                            <div class="video-play">
+                                <i class="fa fa-play"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="video-label">
+
+                            <h4>
+                                MOD DECOR Interior Transformation
+                            </h4>
+
+                            <p>
+                                See our work come to life
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIDEO 4 -->
+
+                <div class="col-md-6 video-item">
+
+                    <div class="video-card"
+                         data-toggle="modal"
+                         data-target="#videoModal4">
+
+                        <video muted preload="metadata">
+
+                            <source
+                                src="Images/About Video4.mp4"
+                                type="video/mp4">
+
+                        </video>
+
+                        <div class="video-overlay">
+
+                            <div class="video-play">
+                                <i class="fa fa-play"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="video-label">
+
+                            <h4>
+                                MOD DECOR Creative Space
+                            </h4>
+
+                            <p>
+                                A look behind our design process
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     VIDEO MODALS
+========================================= -->
+
+<div class="modal fade gallery-video-modal"
+     id="videoModal1"
+     tabindex="-1"
+     role="dialog">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <video controls>
+
+                    <source
+                        src="Images/About Video.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade gallery-video-modal"
+     id="videoModal2"
+     tabindex="-1"
+     role="dialog">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <video controls>
+
+                    <source
+                        src="Images/About Video2.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade gallery-video-modal"
+     id="videoModal3"
+     tabindex="-1"
+     role="dialog">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <video controls>
+
+                    <source
+                        src="Images/About Video3.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal fade gallery-video-modal"
+     id="videoModal4"
+     tabindex="-1"
+     role="dialog">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <video controls>
+
+                    <source
+                        src="Images/About Video4.mp4"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     CALL TO ACTION
+========================================= -->
+
+<section class="gallery-cta gallery-hero">
+
+    <div class="container">
+
+        <h2>
+            Ready to Transform Your Space?
+        </h2>
+
+        <p>
+            Let MOD DECOR bring your interior vision to life with
+            carefully designed spaces, quality materials and professional
+            craftsmanship.
+        </p>
+
+        <a href="index.html#contact" >
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="gallery-footer">
+
+    <div class="container">
+
+        <p>
+            © 2026
+            <span>MOD DECOR Investment Nig. Ltd.</span>
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     WHATSAPP
+========================================= -->
+
+<a
+    href="https://wa.me/2347033757050?text=Hello%20MOD%20DECOR,%20I%20would%20like%20to%20make%20an%20enquiry."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with MOD DECOR on WhatsApp">
+
+    <i class="fa fa-whatsapp"></i>
+
+</a>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="js/jquery-2.1.4.min.js"></script>
+
+<script src="js/bootstrap-3.1.1.min.js"></script>
+
+<script src="js/jquery.swipebox.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+
+        /* =====================================
+           SWIPEBOX
+        ===================================== */
+
+        $(".swipebox").swipebox();
+
+
+        /* =====================================
+           SCROLL TO IMAGES
+        ===================================== */
+
+        $("#imagesBtn").click(function () {
+
+            $(".filter-btn").removeClass("active");
+            $(this).addClass("active");
+
+            $("html, body").animate({
+
+                scrollTop: $("#images").offset().top - 20
+
+            }, 700);
+
+        });
+
+
+        /* =====================================
+           SCROLL TO VIDEOS
+        ===================================== */
+
+        $("#videosBtn").click(function () {
+
+            $(".filter-btn").removeClass("active");
+            $(this).addClass("active");
+
+            $("html, body").animate({
+
+                scrollTop: $("#videos").offset().top - 20
+
+            }, 700);
+
+        });
+
+
+        /* =====================================
+           ALL BUTTON
+        ===================================== */
+
+        $("#allBtn").click(function () {
+
+            $(".filter-btn").removeClass("active");
+            $(this).addClass("active");
+
+            $("html, body").animate({
+
+                scrollTop: $(".gallery-section").offset().top
+
+            }, 700);
+
+        });
+
+
+        /* =====================================
+           STOP ALL VIDEOS WHEN MODAL CLOSES
+        ===================================== */
+
+        $(".gallery-video-modal").on("hidden.bs.modal", function () {
+
+            var video = $(this).find("video")[0];
+
+            if (video) {
+
+                video.pause();
+                video.currentTime = 0;
+
+            }
+
+        });
+
+
+    });
+
+</script>
+
+
 </body>
+
 </html>

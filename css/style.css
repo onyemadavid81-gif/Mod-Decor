@@ -662,6 +662,41 @@ a.navbar-brand {
     color: #FFC107;
 }
 
+.view-more-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.view-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #8C5E51;
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none !important;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background: #333333;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.view-more-btn .fa {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover .fa {
+    transform: translateX(5px);
+}
+
 .agile_banner_text_info {
     position: absolute;
     z-index: 9;
@@ -1451,7 +1486,7 @@ iframe {
 /*-- clients --*/
 .clients-main{
 	padding:5em 0;
-	   background: url(../images/clients.jpg) no-repeat 0px 0px;
+	   background: url(../Images/clients.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1482,9 +1517,20 @@ iframe {
 .clients h3 {
 	color: #000!important;
 }
+/* MOD DECOR testimonial carousel indicators */
+.flex-control-nav li a {
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+/* Active indicator */
+.flex-control-nav li a.flex-active {
+    background: #8C5E51 !important;
+}
+
 .spldishes-w3left {
 	padding: 2.3em;
-	background-color: #fd463e;
+	background-color: #8C5E51;
 	-webkit-transition: .5s all;
 	-moz-transition: .5s all;
 	-o-transition: .5s all;
@@ -1685,6 +1731,20 @@ p.para-w3-agile {
     background: #232323;
     color: #fff;
 }
+.social_agileinfo li {
+	background: #000000;
+}
+.w3_tiktok {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.tiktok-icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+    fill: currentColor;
+}
 .w3agile-map iframe{
     border: none;
     min-height: 300px;
@@ -1791,19 +1851,14 @@ ul.links li a {
     background: #3b5998;
 }
 
-.w3_twitter:hover {
-    border: 1px solid #1da1f2;
-    background: #1da1f2;
-}
-
 .w3_instagram:hover {
     border: 1px solid #833ab4;
     background: #833ab4;
 }
 
-.w3_google:hover {
-    border: 1px solid #dd4b39;
-    background: #dd4b39;
+.w3_tiktok:hover {
+    border: 1px solid #000;
+    background: #000;
 }
 
 .w3l_footer_nav {
@@ -1875,7 +1930,7 @@ p.copyright {
     font-family: 'Raleway', sans-serif;
 }
 .copyright{
-    background: #3b424e;
+    background: #000000;
 }
 p.copyright a {
     color: #fff;
@@ -1897,7 +1952,7 @@ p.copyright a:hover {
     color: #fff;
     font-size: 14px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.22);
+    background: #000000;
     letter-spacing: 2px;
     font-family: 'Raleway', sans-serif;
 }
@@ -1951,6 +2006,172 @@ ul.con_inner_text.midimg li {
     width: 25%;
     margin: 3px;
 }
+
+/* ==============================
+   RFQ CALL-TO-ACTION BANNER
+================================= */
+
+.rfq-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 65px 0;
+    margin: 50px 0 0;
+    background: linear-gradient(135deg, #29211f 0%, #49332e 60%, #8c5e51 100%);
+    color: #fff;
+}
+
+.rfq-banner::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    top: -150px;
+    right: -50px;
+    pointer-events: none;
+}
+
+.rfq-banner-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.rfq-banner-text {
+    max-width: 700px;
+}
+
+.rfq-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #f2b8a5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.rfq-banner-text h2 {
+    margin: 0 0 18px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.rfq-banner-text p {
+    max-width: 650px;
+    margin-bottom: 22px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.rfq-banner-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+}
+
+.rfq-banner-features span {
+    color: #fff;
+    font-size: 13px;
+}
+
+.rfq-banner-features i {
+    margin-right: 6px;
+    color: #f2b8a5;
+}
+
+.rfq-banner-action {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.rfq-banner-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 25px;
+    border: 2px solid #f2b8a5;
+    border-radius: 4px;
+    background: #f2b8a5;
+    color: #29211f !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.rfq-banner-btn:hover {
+    background: transparent;
+    color: #fff !important;
+    transform: translateY(-3px);
+}
+
+.rfq-banner-btn i {
+    transition: transform 0.3s ease;
+}
+
+.rfq-banner-btn:hover i {
+    transform: translateX(5px);
+}
+
+.rfq-banner-action small {
+    display: block;
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 991px) {
+    .rfq-banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .rfq-banner-text h2 {
+        font-size: 30px;
+    }
+
+    .rfq-banner-action {
+        text-align: left;
+    }
+}
+
+@media (max-width: 576px) {
+    .rfq-banner {
+        padding: 45px 0;
+        margin-top: 35px;
+    }
+
+    .rfq-banner-text h2 {
+        font-size: 26px;
+    }
+
+    .rfq-banner-text p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .rfq-banner-features {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .rfq-banner-btn {
+        padding: 14px 20px;
+        font-size: 13px;
+    }
+}
+
+
 /*-- //footer --*/
 /*-- to-top --*/
 #toTop {
